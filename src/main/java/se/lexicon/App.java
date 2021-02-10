@@ -17,6 +17,8 @@ public class App
         Player p1 = new Player("Test", "test", 23);
         Player p2 = new Player("Test2", "test2", 253);
         List<Player> lp = new ArrayList<>();
+        lp.add(p1);
+        lp.add(p2);
         serialize(lp, "src/main/java/se/lexicon/files/test.ser");
     }
 
