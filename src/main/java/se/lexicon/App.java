@@ -35,4 +35,14 @@ public class App
 
 
 
+    public static <T> void serializeGeneric(List<T> source , String filePath){
+        try(
+                FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+                ObjectOutputStream out = new ObjectOutputStream(fileOutputStream)
+        ){
+            out.writeObject(source);
+        }catch (IOException ex){
+            ex.printStackTrace();
+        }
+    }
 }
